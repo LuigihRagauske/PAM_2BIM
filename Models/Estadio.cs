@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CopaApi.Models;
 
 namespace CopaHAS.Models
 {
@@ -11,5 +12,8 @@ namespace CopaHAS.Models
         public string Nome { get; set; } = string.Empty;
         public string Cidade { get; set; } = string.Empty;
         public decimal Capacidade { get; set; }
+
+        //1:N
+        public List<Jogo> Jogos { get; set;} = new List<Jogo>();
     }
 }
