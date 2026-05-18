@@ -3127,11 +3127,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\2026\\PAM\\Aula10\\CopaApi\\CopaHAS.csproj",
+      "projectUniqueName": "D:\\3AIGL\\PAM\\PAM_2BIM\\CopaHAS.csproj",
       "projectName": "CopaHAS",
-      "projectPath": "E:\\2026\\PAM\\Aula10\\CopaApi\\CopaHAS.csproj",
+      "projectPath": "D:\\3AIGL\\PAM\\PAM_2BIM\\CopaHAS.csproj",
       "packagesPath": "D:\\NUGET_PACKAGES",
-      "outputPath": "E:\\2026\\PAM\\Aula10\\CopaApi\\obj\\",
+      "outputPath": "D:\\3AIGL\\PAM\\PAM_2BIM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
