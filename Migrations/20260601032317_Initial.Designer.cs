@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CopaHAS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20260601023450_AddJogos")]
-    partial class _20260601023450_AddJogos
+    [Migration("20260601032317_Initial")]
+    partial class _20260601032317_Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -86,6 +86,28 @@ namespace CopaHAS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TB_SELECOES", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Pais = "Brasil"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Pais = "Argentina"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Pais = "França"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Pais = "Portugal"
+                        });
                 });
 
             modelBuilder.Entity("CopaApi.Models.Tecnico", b =>
@@ -289,7 +311,7 @@ namespace CopaHAS.Migrations
                             Nome = "Hugo Souza",
                             NumeroCamisa = 1,
                             Posicao = "Goleiro",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -298,7 +320,7 @@ namespace CopaHAS.Migrations
                             Nome = "Yuri Alberto",
                             NumeroCamisa = 9,
                             Posicao = "Atacante",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -307,7 +329,7 @@ namespace CopaHAS.Migrations
                             Nome = "Danilo",
                             NumeroCamisa = 2,
                             Posicao = "Lateral Direito",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -316,7 +338,7 @@ namespace CopaHAS.Migrations
                             Nome = "Marquinhos",
                             NumeroCamisa = 4,
                             Posicao = "Zagueiro",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -325,7 +347,7 @@ namespace CopaHAS.Migrations
                             Nome = "Casemiro",
                             NumeroCamisa = 5,
                             Posicao = "Volante",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -334,7 +356,7 @@ namespace CopaHAS.Migrations
                             Nome = "Alex Sandro",
                             NumeroCamisa = 6,
                             Posicao = "Lateral Esquerdo",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -343,7 +365,7 @@ namespace CopaHAS.Migrations
                             Nome = "Lucas Paquetá",
                             NumeroCamisa = 7,
                             Posicao = "Meio Campo",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -352,7 +374,7 @@ namespace CopaHAS.Migrations
                             Nome = "Bruno Guimarães",
                             NumeroCamisa = 8,
                             Posicao = "Meio Campo",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 2
                         },
                         new
@@ -361,7 +383,7 @@ namespace CopaHAS.Migrations
                             Nome = "Richarlison",
                             NumeroCamisa = 10,
                             Posicao = "Atacante",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -370,7 +392,7 @@ namespace CopaHAS.Migrations
                             Nome = "Vinicius Jr",
                             NumeroCamisa = 11,
                             Posicao = "Atacante",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 1
                         },
                         new
@@ -379,7 +401,7 @@ namespace CopaHAS.Migrations
                             Nome = "Rodrygo",
                             NumeroCamisa = 19,
                             Posicao = "Atacante",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 3
                         },
                         new
@@ -388,7 +410,7 @@ namespace CopaHAS.Migrations
                             Nome = "Alisson",
                             NumeroCamisa = 23,
                             Posicao = "Goleiro",
-                            SelecaoId = 0,
+                            SelecaoId = 1,
                             Status = 4
                         });
                 });

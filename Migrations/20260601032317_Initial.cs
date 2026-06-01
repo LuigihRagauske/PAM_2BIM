@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace CopaHAS.Migrations
 {
     /// <inheritdoc />
-    public partial class _20260601023450_AddJogos : Migration
+    public partial class _20260601032317_Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -137,6 +139,101 @@ namespace CopaHAS.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 1,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 2,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 3,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 4,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 5,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 6,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 7,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 8,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 9,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 10,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 11,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 12,
+                column: "SelecaoId",
+                value: 1);
+
+            migrationBuilder.InsertData(
+                table: "TB_SELECOES",
+                columns: new[] { "Id", "Pais" },
+                values: new object[,]
+                {
+                    { 1, "Brasil" },
+                    { 2, "Argentina" },
+                    { 3, "França" },
+                    { 4, "Portugal" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_TB_JOGADORES_SelecaoId",
                 table: "TB_JOGADORES",
@@ -231,6 +328,90 @@ namespace CopaHAS.Migrations
                 oldType: "varchar(100)",
                 oldMaxLength: 100,
                 oldNullable: true);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 1,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 2,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 3,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 4,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 5,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 6,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 7,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 8,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 9,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 10,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 11,
+                column: "SelecaoId",
+                value: 0);
+
+            migrationBuilder.UpdateData(
+                table: "TB_JOGADORES",
+                keyColumn: "Id",
+                keyValue: 12,
+                column: "SelecaoId",
+                value: 0);
         }
     }
 }
