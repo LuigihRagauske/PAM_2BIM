@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CopaHAS.Controllers
+
 {
     [ApiController]
     [Route("[controller]")]

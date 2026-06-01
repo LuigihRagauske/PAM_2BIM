@@ -7,7 +7,7 @@ using CopaApi.Models;
 using CopaHAS.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Identity.Client;
+
 
 namespace CopaHAS.Data
 {
@@ -22,7 +22,7 @@ namespace CopaHAS.Data
         public DbSet<Selecao> TB_SELECOES { get; set; }
         public DbSet<Tecnico> TB_TECNICOS { get; set; }
         public DbSet<Jogo> TB_JOGOS { get; set; }
-        public DbSet<JogoSelecao> TB_JOGO_SELECOES { get; set; }
+        public DbSet<JogoSelecao> TB_JOGOS_SELECOES { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,23 +31,30 @@ namespace CopaHAS.Data
             modelBuilder.Entity<Selecao>().ToTable("TB_SELECOES");
             modelBuilder.Entity<Tecnico>().ToTable("TB_TECNICOS");
             modelBuilder.Entity<Jogo>().ToTable("TB_JOGOS");
-            modelBuilder.Entity<JogoSelecao>().ToTable("TB_JOGO_SELECOES");
+            modelBuilder.Entity<JogoSelecao>().ToTable("TB_JOGOS_SELECOES");
+
+            modelBuilder.Entity<Selecao>().HasData(
+                new Selecao() { Id = 1, Pais = "Brasil" },
+                new Selecao() { Id = 2, Pais = "Argentina" },
+                new Selecao() { Id = 3, Pais = "França" },
+                new Selecao() { Id = 4, Pais = "Portugal" }
+            );
 
 
             modelBuilder.Entity<Jogador>().HasData
             (
-                new Jogador() { Id = 1, Nome = "Hugo Souza", NumeroCamisa = 1, Posicao = "Goleiro", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 2, Nome = "Yuri Alberto", NumeroCamisa = 9, Posicao = "Atacante", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 3, Nome = "Danilo", NumeroCamisa = 2, Posicao = "Lateral Direito", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 4, Nome = "Marquinhos", NumeroCamisa = 4, Posicao = "Zagueiro", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 5, Nome = "Casemiro", NumeroCamisa = 5, Posicao = "Volante", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 6, Nome = "Alex Sandro", NumeroCamisa = 6, Posicao = "Lateral Esquerdo", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 7, Nome = "Lucas Paquetá", NumeroCamisa = 7, Posicao = "Meio Campo", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 8, Nome = "Bruno Guimarães", NumeroCamisa = 8, Posicao = "Meio Campo", Status = Models.Enuns.StatusJogador.Reserva },
-                new Jogador() { Id = 9, Nome = "Richarlison", NumeroCamisa = 10, Posicao = "Atacante", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 10, Nome = "Vinicius Jr", NumeroCamisa = 11, Posicao = "Atacante", Status = Models.Enuns.StatusJogador.Titular },
-                new Jogador() { Id = 11, Nome = "Rodrygo", NumeroCamisa = 19, Posicao = "Atacante", Status = Models.Enuns.StatusJogador.DepartamentoMedico },
-                new Jogador() { Id = 12, Nome = "Alisson", NumeroCamisa = 23, Posicao = "Goleiro", Status = Models.Enuns.StatusJogador.NaoRelacionado }
+                new Jogador() { Id = 1, Nome = "Hugo Souza", NumeroCamisa = 1, Posicao = "Goleiro", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 2, Nome = "Yuri Alberto", NumeroCamisa = 9, Posicao = "Atacante", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 3, Nome = "Danilo", NumeroCamisa = 2, Posicao = "Lateral Direito", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 4, Nome = "Marquinhos", NumeroCamisa = 4, Posicao = "Zagueiro", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 5, Nome = "Casemiro", NumeroCamisa = 5, Posicao = "Volante", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 6, Nome = "Alex Sandro", NumeroCamisa = 6, Posicao = "Lateral Esquerdo", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 7, Nome = "Lucas Paquetá", NumeroCamisa = 7, Posicao = "Meio Campo", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 8, Nome = "Bruno Guimarães", NumeroCamisa = 8, Posicao = "Meio Campo", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Reserva },
+                new Jogador() { Id = 9, Nome = "Richarlison", NumeroCamisa = 10, Posicao = "Atacante", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 10, Nome = "Vinicius Jr", NumeroCamisa = 11, Posicao = "Atacante", SelecaoId = 1, Status = Models.Enuns.StatusJogador.Titular },
+                new Jogador() { Id = 11, Nome = "Rodrygo", NumeroCamisa = 19, Posicao = "Atacante", SelecaoId = 1, Status = Models.Enuns.StatusJogador.DepartamentoMedico },
+                new Jogador() { Id = 12, Nome = "Alisson", NumeroCamisa = 23, Posicao = "Goleiro", SelecaoId = 1, Status = Models.Enuns.StatusJogador.NaoRelacionado }
             );
             modelBuilder.Entity<Estadio>().HasData
             (
